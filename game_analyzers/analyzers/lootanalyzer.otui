@@ -1,0 +1,142 @@
+MiniWindow
+  id: lootAnalyzerWindow
+  !text: tr('Loot Statistics')
+  color: #8F8F8F
+  height: 110
+  width: 110
+  auto-scroll: true
+  &save: true
+  &autoOpen: false
+
+  HorizontalScrollBar
+    id: priority
+    anchors.left: prev.left
+    anchors.right: prev.right
+    anchors.top: prev.bottom
+    margin-top: 5
+    minimum: 110
+    step: 1  
+
+  MiniWindowContents
+    padding-left: 10
+    padding-right: 10
+    margin-top: 18
+    layout: verticalBox
+
+  MiniBroder
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom
+    margin-bottom: 2
+    margin-left: 2
+
+  Button
+    id: resetStatisticsLabel
+    !text: tr('Reset Statistics')
+    font: cipsoftFont
+    size: 149 16
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 15
+    margin-top: 23
+
+  Label
+    id: lootLabel
+    !text: tr('Loot')
+    font: verdana-11px-antialised
+    color: #afafaf
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 15
+    margin-top: 43
+
+  Label
+    id: suppliesLabel
+    !text: tr('Supplies')
+    font: verdana-11px-antialised
+    color: #afafaf
+    anchors.top: prev.bottom
+    anchors.left: prev.left
+    margin-top: 5
+
+  Label
+    id: profitLabel
+    !text: tr('Profit')
+    font: verdana-11px-antialised
+    color: #afafaf
+    anchors.top: prev.bottom
+    anchors.left: prev.left
+    margin-top: 5
+
+  HorizontalSeparator
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: 3
+    margin-left: 10
+    margin-right: 10
+
+  Label
+    id: suppliesUsedLabel
+    !text: tr('Supplies Used')
+    font: verdana-11px-antialised
+    color: #ff9600
+    text-align: center
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 2
+
+  HorizontalSeparator
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: 2
+    margin-left: 10
+    margin-right: 10
+
+  Label
+    id: lootedItemsLabel
+    !text: tr('Looted Items')
+    font: verdana-11px-antialised
+    text-align: center
+    color: #00a504
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 2
+
+  HorizontalSeparator
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: 2
+    margin-left: 10
+    margin-right: 10
+
+  Label
+    id: lootAmount
+    text-align: right
+    color: #1ffc02
+    font: verdana-11px-antialised
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 15
+    margin-top: 43
+
+  Label
+    id: suppliesAmount
+    text-align: right
+    color: #d8ff00
+    font: verdana-11px-antialised
+    anchors.top: prev.bottom
+    anchors.right: prev.right
+    margin-top: 5
+
+  Label
+    id: profitAmount
+    text-align: right
+    color: #ff6767
+    font: verdana-11px-antialised
+    anchors.top: prev.bottom
+    anchors.right: prev.right
+    margin-top: 5

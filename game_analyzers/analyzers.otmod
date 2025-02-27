@@ -1,0 +1,11 @@
+Module
+  name: game_analyzers
+  description: Contains the game analyzers
+  author: Aurelion
+  autoload: true
+  sandboxed: true
+  scripts: [analyzers]
+  @onLoad: init()
+  @onUnload: terminate()
+  dependencies:
+    - game_interface

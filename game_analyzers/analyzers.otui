@@ -1,0 +1,49 @@
+MiniWindow
+  id: analyzersWindow
+  !text: tr('Analytics Selector')
+  color: #8F8F8F
+  height: 70
+  icon: analyzers/images/analyzers
+  @onClose: modules.game_analyzers.onMiniWindowClose()
+  focusable: true
+  &save: true
+  &autoOpen: true
+  
+  MiniWindowContents
+    padding-left: 10
+    padding-right: 10
+    margin-top: 18
+    layout: verticalBox
+
+  Button
+    id: resetButton
+    !text: tr('Reset EXP Statistics')
+    anchors.top: parent.top
+    anchors.horizontalCenter: prev.horizontalCenter
+    margin-top: 25
+    size: 138 20
+    @onClick: clean()
+
+  Button
+    id: lootButton
+    !text: tr('Loot Analyzer')
+    anchors.top: prev.bottom
+    anchors.horizontalCenter: prev.horizontalCenter
+    margin-top: 3
+    size: 158 20
+    @onClick: modules.game_lootstatistics.toggle()
+
+  Button
+    id: impactButton
+    !text: tr('XP Analyzer')
+    anchors.top: prev.bottom
+    anchors.horizontalCenter: prev.horizontalCenter
+    margin-top: 3
+    size: 158 20
+    @onClick: expAnalyzerToggle()
+
+  MiniBroder
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom
+    margin-bottom: 2
+    margin-left: 2
